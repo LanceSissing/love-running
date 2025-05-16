@@ -97,6 +97,21 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525
 }
 
 #menu {
@@ -114,7 +129,7 @@ header {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* Navbar style with dropdow toggle */
+/* Navbar style with dropdown toggle */
 nav {
     position: absolute;
     background-color: #ffffff;
@@ -123,20 +138,24 @@ nav {
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
+    top: 100%;
     }
 
-header a {
-    text-decoration: none;
-    color: inherit;
-}
-h1 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525
+/*Nav toggle*/
+#nav-toggle:checked~nav {
+    display: block;
 }
 
-/* Main */
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size:2rem;
+}
+
+
+ /* Main */
 main {
     background-color: lightblue;
     /* Make Main element take up surplus space to push Footer to bottom of page */
