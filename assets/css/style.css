@@ -89,6 +89,13 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525
+}
+
 /* Header */
 header {
     background-color: #ffffff;
@@ -107,12 +114,7 @@ header a {
     color: inherit;
 }
 
-h1 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525
-}
+
 
 #menu {
     font-size: 110%;
@@ -169,7 +171,25 @@ main {
   height: 600px;
   width: 100%;
   background: url(../images/IMG_0430.JPEG) no-repeat center center/cover;
+  position: relative;
 }
+
+#cover-text {
+  /* Make text cover (background) semi-transparent */
+  background-color: rgba(241, 109, 107, .7);
+  font-size: 130%;
+  position: absolute;
+  bottom: 30px;
+  width: 80%;
+  min-height: 200px;  
+  padding-top: 40px;
+  padding-left: 10px;
+}
+
+#cover-text > h2, #cover-text > h3 {
+  color: #ffffff;
+}
+
 
 /* Footer */
 
@@ -218,6 +238,12 @@ main {
 
     main {
       margin-top: 79px;
+    }
+
+    /* Hero */
+    #cover-text {
+      width:300px;
+      right: 50px;
     }
 
     /* Large device 992px upward */
