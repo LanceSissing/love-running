@@ -1,85 +1,14 @@
 /* Google font embed - Lato and Oswald */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
 
-// <weight>: Use a value from 200 to 700
-// <uniquifier>: Use a unique and descriptive class name
-
-.oswald-<uniquifier> {
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-.lato-thin {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.lato-light {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.lato-regular {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.lato-bold {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.lato-black {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.lato-thin-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.lato-light-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.lato-regular-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.lato-bold-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.lato-black-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
-
-/* Asterisk Wildcard Selector */
+/* --------------------------------------- ASTERISK WILDCARD SELECTOR ------------------------------------------------- */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* General Styles */
+/* -------------------------------------------GENERAL STYLES ----------------------------------------------------------------- */
 body {
     min-height: 100vh;
     display: flex;
@@ -93,10 +22,11 @@ h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #252525
+    color: #252525;
 }
 
-/* Header */
+/* -----------------------------------------STYLES FOR HEADER --------------------------------------------------------------- */
+
 header {
     background-color: #ffffff;
     padding: 0 1rem;
@@ -114,8 +44,6 @@ header a {
     color: inherit;
 }
 
-
-
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
@@ -124,14 +52,14 @@ header a {
 
 #menu > li {
     margin-bottom: 1em;
-
 }
 
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* Navbar style with dropdown toggle */
+/* --------------------------------------- STYLES FOR NAV BAR INCL DROPDOWN TOGGLE ------------------------------------------------ */
+
 nav {
     position: absolute;
     background-color: #ffffff;
@@ -143,7 +71,8 @@ nav {
     top: 100%;
     }
 
-/*Nav toggle*/
+/* ------------------------------------------NAV BAR TOGGLE ------------------------------------------------------------------------- */
+
 #nav-toggle:checked~nav {
     display: block;
 }
@@ -153,19 +82,21 @@ nav {
 }
 
 .nav-toggle-label {
-    font-size:2rem;
+    font-size: 2rem;
 }
 
 
- /* Main */
+/* ---------------------------------------STYLES FOR MAIN SECTION & MAIN CONTENT------------------------------------------------------- */
+
 main {
     
-    /* Make Main element take up surplus space to push Footer to bottom of page */
+    /* ---------------- FLEX TO MAKE FOOTER SIT AT BOTTOM OF PAGE ---------------------------------------------------------------------- */
+    
     flex: 1 0 auto;
     margin-top: 47px;
 }
 
-/* Hero Section */
+/* ----------------------------- SECTION FOR HERO IMAGE ------------------------------------------------------------------------------- */
 
 #hero {
   height: 600px;
@@ -175,7 +106,7 @@ main {
 }
 
 #cover-text {
-  /* Make text cover (background) semi-transparent */
+  /*--------------------------MAKE COVER TEXT BACKGROUND SEMI-TRANSPARENT ------------------------------------------------------------- */
   background-color: rgba(241, 109, 107, .7);
   font-size: 130%;
   position: absolute;
@@ -190,8 +121,34 @@ main {
   color: #ffffff;
 }
 
+/* --------------------------------------------------- 'REASONS' SECTION --------------------------------------------------------------- */
 
-/* Footer */
+#reasons {
+  width: 90%;
+  margin: 20px auto;
+}
+
+#reasons h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 280%;
+}
+
+#benefits-physical>div, #benefits-mental>div {
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+#benefits p {
+  padding: 0 20px;
+}
+
+benefits hr {
+  border-top: 1px solid #3a3a3a;
+  margin: 5px;
+}
+
+/* --------------------------------------------------- FOOTER ----------------------------------------------------------------------------- */
 
 #social-networks {
   text-align: center;
@@ -207,7 +164,8 @@ main {
   color: #3a3a3a;   
 }
 
-/* Media-query: tablets and larger - 768px and up */
+
+/* ------------------------------------ MEDIA QUERY - BREAK POINT FOR 768PX AND UP ----------------------------------------------------------*/
 
 @media screen and (min-width: 768px) {
     nav {
@@ -217,7 +175,7 @@ main {
         width: fit-content;
         padding-right: 1rem;
     }
-    
+        
     #menu {
         display: flex;
     }
@@ -246,13 +204,13 @@ main {
       right: 50px;
     }
 
-    /* Large device 992px upward */
+/* ------------------------------------ MEDIA QUERY - BREAK POINT FOR 992PX AND UP ----------------------------------------------------------*/
 
-    @media screen and (min-width: 992px) {
-    nav {
-        #menu a:hover {
-          border-bottom: 1px solid #3a3a3a;
-        }
+  @media screen and (min-width: 992px) {
+  nav {
+    #menu a:hover {
+    border-bottom: 1px solid #3a3a3a;
+  }
         
     }
 }
